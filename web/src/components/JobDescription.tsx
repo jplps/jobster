@@ -69,9 +69,9 @@ const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 
 					<hr />
 					<Markdown source={job.description} />
+					<hr />
 				</div>
 			}
-			<hr />
 		</>
 	);
 }
