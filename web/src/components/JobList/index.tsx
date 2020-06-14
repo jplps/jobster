@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 import './styles.css';
-import { isPrimitive } from 'util';
-import { toUnicode } from 'punycode';
 
 interface Job {
 	id: string;
