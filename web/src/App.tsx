@@ -7,14 +7,14 @@ import JobDescription from './components/JobDescription';
 
 const App = () => {
 	return (
-		<Layout>
-			<AppRouter>
+		<AppRouter>
+			<Layout>
 				<Switch>
 					<Route exact path="/" component={JobList} />
 					<Route path="/:companySlug/:jobSlug" component={JobDescription} />
 				</Switch>
-			</AppRouter>
-		</Layout>
+			</Layout>
+		</AppRouter>
 	);
 }
 

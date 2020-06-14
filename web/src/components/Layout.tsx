@@ -1,11 +1,12 @@
 import React, { FunctionComponent } from 'react';
+import { Link } from 'react-router-dom';
 
 import NewsletterForm from './NewsletterForm';
 
 const Layout: FunctionComponent = ({ children }) => (
 	<>
 		<header>
-			<p><strong>Graph Jobs</strong></p>
+			<Link to="/"><strong>Graph Jobs</strong></Link>
 		</header>
 
 		<main>
