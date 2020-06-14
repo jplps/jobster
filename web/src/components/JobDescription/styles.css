@@ -1,0 +1,16 @@
+/* JobDescription Markdown List */
+.job-description.grid {
+  grid-template-columns: 1fr !important;
+}
+.job-description ul li {
+  list-style-position: inside;
+}
+.job-description ul li a {
+  background: none;
+  color: var(--grey);
+  opacity: 0.75;
+}
+.job-description ul li a:hover {
+  background: none;
+  opacity: 1;
+}

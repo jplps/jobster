@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 
-import NewsletterForm from './NewsletterForm';
+import NewsletterForm from '../NewsletterForm';
+import './styles.css';
 
 const Layout: FunctionComponent = ({ children }) => (
 	<>

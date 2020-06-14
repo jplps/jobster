@@ -1,0 +1,38 @@
+/* Layout */
+* {
+  outline: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default grid style */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
+}
+
+header {
+  text-align: end;
+}
+footer form.grid {
+  grid-template-columns: 1fr !important;
+}
+
+/* Overall Link */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+/* Spacer */
+hr {
+  margin: 1rem 0;
+  border: none;
+  border-bottom: 1px solid var(--grey);
+}

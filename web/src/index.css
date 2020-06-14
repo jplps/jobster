@@ -18,101 +18,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  outline: none !important;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  text-align: end;
-}
-footer form.grid {
-  grid-template-columns: 1fr !important;
-}
-
-/* Overall Link */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-a:hover {
-  color: inherit;
-  cursor: pointer;
-  opacity: 0.75;
-}
-
-/* Spacer */
-hr {
-  margin: 1rem 0;
-  border: none;
-  border-bottom: 1px solid var(--grey);
-}
-
-/* JobList */
-.job-list {
-  margin: 1rem 0;
-}
-.job-list a {
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.089);
-}
-.job-list a:hover {
-  color: var(--black);
-  background-color: var(--white);
-}
-.job-list li span {
-  color: var(--grey);
-  font-size: 90%;
-}
-.job-list li {
-  list-style: none;
-}
-
-/* JobDescription Markdown List */
-.job-description.grid {
-  grid-template-columns: 1fr !important;
-}
-.job-description ul li {
-  list-style-position: inside;
-}
-.job-description ul li a {
-  background: none;
-  color: var(--grey);
-  opacity: 0.75;
-}
-.job-description ul li a:hover {
-  background: none;
-  opacity: 1;
-}
-
-/* Newsletter Form */
-.newsletter-form fieldset, input {
-  border: none;
-}
-.newsletter-form input {
-  box-sizing: border-box;
-  margin-bottom: 0.1rem;
-  border-radius: 5px;
-  width: 100%;
-  padding: 0.5rem;
-}
-
-/* Default grid style */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 0.5rem;
-}
-
 /* Responsiveness */
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media only screen and (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -122,6 +34,7 @@ hr {
     grid-column: 2 / 3;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   .grid {
     grid-template-columns: repeat(5, 1fr);

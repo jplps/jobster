@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import Markdown from 'react-markdown';
 
-import api from '../services/api';
+import api from '../../services/api';
+import './styles.css';
 
 interface Job {
 	id: string;

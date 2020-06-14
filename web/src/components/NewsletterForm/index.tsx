@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
-import api from '../services/api';
+import api from '../../services/api';
+import './styles.css';
 
 const NewsletterForm = () => {
 	const [formData, setFormData] = useState({ name: '', email: '' });
