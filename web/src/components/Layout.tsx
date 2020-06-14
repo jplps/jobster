@@ -13,7 +13,7 @@ const Layout: FunctionComponent = ({ children }) => (
 			{children}
 		</main>
 
-		<footer className="grid">
+		<footer className="footer grid">
 			<p><strong>Subscribe to the Newsletter!</strong></p>
 			<NewsletterForm />
 		</footer>

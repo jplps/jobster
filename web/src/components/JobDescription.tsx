@@ -58,7 +58,7 @@ const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 		<>
 			{match.isExact && !job
 				? <p>Loading Job details...</p>
-				: <div className="job grid">
+				: <div className="job-description grid">
 					<h1>{job.title}</h1>
 
 					<span>
@@ -69,9 +69,9 @@ const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 
 					<hr />
 					<Markdown source={job.description} />
-					<hr />
 				</div>
 			}
+			<hr />
 		</>
 	);
 }

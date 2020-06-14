@@ -32,7 +32,7 @@ const NewsletterForm = () => {
 	}
 
 	return (
-		<form className="grid" onSubmit={handleSubmit}>
+		<form className="newsletter grid" onSubmit={handleSubmit}>
 			<fieldset>
 				<legend style={{ display: 'none' }}>Newsletter Subscription</legend>
 

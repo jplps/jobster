@@ -50,7 +50,7 @@ const JobList = () => {
 			<h1>Job List</h1>
 
 			<hr />
-			<ul className="job grid">
+			<ul className="job-list grid">
 				{jobs.length < 1
 					? <p>Loading Jobs from API...</p>
 					: jobs.map(job => (
