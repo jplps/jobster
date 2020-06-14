@@ -8,6 +8,6 @@ This is a simple frontend React app, consuming data from a ![Graphql API](https:
 - Show Job Description (dynamic job pages)
 - Provide Newsletter subscription seshion (with success/fail alert)
 
-To run the app
+To run the app, inside web/ run
 
 		$ yarn start
