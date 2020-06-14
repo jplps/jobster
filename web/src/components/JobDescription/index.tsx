@@ -15,7 +15,7 @@ interface Job {
 	description: string;
 	company: {
 		name: string;
-	},
+	};
 	postedAt: string;
 }
 
