@@ -13,6 +13,9 @@ interface Job {
 		title: string;
 	};
 	description: string;
+	company: {
+		name: string;
+	},
 	postedAt: string;
 }
 
@@ -24,7 +27,8 @@ interface JobMatch {
 
 const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 	const [job, setJob] = useState<Job>({
-		id: '', commitment: { title: '' }, postedAt: '', slug: '', title: '', description: ''
+		id: '', commitment: { title: '' }, postedAt: '',
+		slug: '', title: '', description: '', company: { name: '' }
 	});
 
 	const { jobSlug } = match.params;
@@ -43,6 +47,9 @@ const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 					title
 				},
 				description,
+				company {
+					name
+				},
 				postedAt
 			}
 		}
@@ -63,9 +70,9 @@ const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 					<h1>{job.title}</h1>
 
 					<span>
-						{job.postedAt}
+						<span>{job.company.name}</span> - {job.commitment.title}
 						<br />
-						{job.commitment.title}
+						{new Date(job.postedAt).toLocaleString()}
 					</span>
 
 					<hr />

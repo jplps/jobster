@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 import './styles.css';
+import { isPrimitive } from 'util';
+import { toUnicode } from 'punycode';
 
 interface Job {
 	id: string;
@@ -12,9 +14,11 @@ interface Job {
 		title: string;
 	};
 	company: {
+		name: string;
 		slug: string;
 	};
-	postedAt: Date;
+	postedAt: string;
+	isPublished: boolean;
 }
 
 const query = `
@@ -27,9 +31,11 @@ const query = `
         title
 			},
 			company {
+				name,
 				slug
 			},
-      postedAt
+			postedAt,
+			isPublished
     }
   }
 `;
@@ -39,7 +45,10 @@ const JobList = () => {
 
 	const getAllJobs = async () => {
 		const { data } = await api({ data: { query } });
-		setJobs(data.data.jobs);
+
+		const publishedJobs = data.data.jobs.filter((job: Job) => job.isPublished === true);
+
+		setJobs(publishedJobs);
 	}
 
 	useEffect(() => {
@@ -58,9 +67,12 @@ const JobList = () => {
 						<Link to={`/${job.company.slug}/${job.slug}`} key={job.id}>
 							<li>
 								<p>{job.title}</p>
-								<span>{job.postedAt}</span>
-								<br />
-								<span>{job.commitment.title}</span>
+
+								<span>
+									<span>{job.company.name}</span> - {job.commitment.title}
+									<br />
+									{new Date(job.postedAt).toLocaleString()}
+								</span>
 							</li>
 						</Link>
 					))}

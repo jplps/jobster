@@ -1,7 +1,15 @@
 /* JobDescription Markdown List */
+.job-description span {
+  color: var(--grey);
+}
+.job-description span span {
+  color: #fff;
+}
+
 .job-description.grid {
   grid-template-columns: 1fr !important;
 }
+
 .job-description ul li {
   list-style-position: inside;
 }
