@@ -65,7 +65,11 @@ const JobDescription = ({ match }: RouteComponentProps<JobMatch>) => {
 	return (
 		<>
 			{match.isExact && job.id === ''
-				? <p>Loading Job details...</p>
+				? <>
+					<hr />
+					<p>Loading Job details...</p>
+					<hr />
+				</>
 				: <div className="job-description grid">
 					<h1>{job.title}</h1>
 
